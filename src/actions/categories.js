@@ -1,18 +1,7 @@
-import fetch from 'cross-fetch';
+import 'cross-fetch/polyfill';
 import { FETCH_CATEGORIES } from './constants';
 
 const categoriesApi = 'https://api.gousto.co.uk/products/v2.0/categories';
-
-// export const fetchCategories = () => {
-//   return dispatch => {
-//     return fetch(categoriesApi)
-//       .then(response => response.json())
-//       .then(json => dispatch({
-//         type: FETCH_CATEGORIES,
-//         categories: json,
-//       }));
-//   };
-// };
 
 export const fetchCategories = () => {
   return dispatch => {
