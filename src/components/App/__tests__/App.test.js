@@ -4,9 +4,13 @@ import { shallow } from 'enzyme';
 import App from '../App';
 
 describe('App', () => {
-  const app = shallow(<App/>);
+  const element = shallow(<App/>);
 
   it('renders properly', () => {
-    expect(app).toMatchSnapshot();
+    expect(element).toMatchSnapshot();
+  });
+
+  it('should contain one top level heading', () => {
+    expect(element.find('h1')).toHaveLength(1);
   });
 });

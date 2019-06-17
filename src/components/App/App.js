@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
-import About from '../About'
 import Home from '../Home'
 import './App.css'
 
@@ -8,14 +7,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className="navBar">
-          <Link to="/">Home</Link>
-          <Link to="/about-us">About</Link>
+        <header className="app--header">
+          <h1 className="logo">Gousto</h1>
         </header>
 
         <main>
           <Route exact path="/" component={Home} />
-          <Route exact path="/about-us" component={About} />
         </main>
       </div>
     )

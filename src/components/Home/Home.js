@@ -2,15 +2,12 @@ import React from 'react'
 import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import Categories from '../Categories';
 
-const Home = (props) => (
+export const Home = (props) => (
   <div>
-    <h1 className="title">Welcome to Gousto React Coding Test</h1>
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to About page via router
-      </button>
-    </p>
+    <Categories />
+    <p>List products here</p>
   </div>
 )
 

@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Categories /> Given that I am a user when I land on the main page displays the categories of products 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Categories
+    categories={
+      Array [
+        Object {
+          "id": "1",
+          "title": "Drinks Cabinet",
+        },
+        Object {
+          "id": "2",
+          "title": "Kitchenware",
+        },
+      ]
+    }
+    fetchCategories={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="categories__heading"
+        >
+          Categories:
+        </h2>,
+        <ul
+          className="categories__list"
+        >
+          <li
+            className="categories__category"
+          >
+            Drinks Cabinet
+          </li>
+          <li
+            className="categories__category"
+          >
+            Kitchenware
+          </li>
+        </ul>,
+      ],
+      "className": "categories",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Categories:",
+          "className": "categories__heading",
+        },
+        "ref": null,
+        "rendered": "Categories:",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="categories__category"
+            >
+              Drinks Cabinet
+            </li>,
+            <li
+              className="categories__category"
+            >
+              Kitchenware
+            </li>,
+          ],
+          "className": "categories__list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Drinks Cabinet",
+              "className": "categories__category",
+            },
+            "ref": null,
+            "rendered": "Drinks Cabinet",
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Kitchenware",
+              "className": "categories__category",
+            },
+            "ref": null,
+            "rendered": "Kitchenware",
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="categories__heading"
+          >
+            Categories:
+          </h2>,
+          <ul
+            className="categories__list"
+          >
+            <li
+              className="categories__category"
+            >
+              Drinks Cabinet
+            </li>
+            <li
+              className="categories__category"
+            >
+              Kitchenware
+            </li>
+          </ul>,
+        ],
+        "className": "categories",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Categories:",
+            "className": "categories__heading",
+          },
+          "ref": null,
+          "rendered": "Categories:",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="categories__category"
+              >
+                Drinks Cabinet
+              </li>,
+              <li
+                className="categories__category"
+              >
+                Kitchenware
+              </li>,
+            ],
+            "className": "categories__list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Drinks Cabinet",
+                "className": "categories__category",
+              },
+              "ref": null,
+              "rendered": "Drinks Cabinet",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Kitchenware",
+                "className": "categories__category",
+              },
+              "ref": null,
+              "rendered": "Kitchenware",
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
+}
+`;
