@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
-import About from './About.js'
-import Home from './Home.js'
+import About from '../About'
+import Home from '../Home'
 import './App.css'
 
 class App extends Component {

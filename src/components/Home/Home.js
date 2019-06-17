@@ -14,8 +14,7 @@ const Home = (props) => (
   </div>
 )
 
-const mapStateToProps = ({ }) => ({
-})
+const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
