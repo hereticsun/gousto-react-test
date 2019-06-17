@@ -3,11 +3,12 @@ import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Categories from '../Categories';
+import Products from '../Products';
 
 export const Home = (props) => (
   <div>
     <Categories />
-    <p>List products here</p>
+    <Products />
   </div>
 )
 

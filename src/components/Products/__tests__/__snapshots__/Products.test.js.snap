@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Products /> Given that I am a user when I land on the main page displays the list of product titles 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Products
+    fetchProducts={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    products={
+      Array [
+        Object {
+          "id": "1",
+          "title": "Borsao Macabeo",
+        },
+        Object {
+          "id": "2",
+          "title": "Love Shortie All Butter Shortbread",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="products__heading"
+        >
+          Products:
+        </h2>,
+        <ul
+          className="products__list"
+        >
+          <li
+            className="products__product"
+          >
+            Borsao Macabeo
+          </li>
+          <li
+            className="products__product"
+          >
+            Love Shortie All Butter Shortbread
+          </li>
+        </ul>,
+      ],
+      "className": "products",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Products:",
+          "className": "products__heading",
+        },
+        "ref": null,
+        "rendered": "Products:",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="products__product"
+            >
+              Borsao Macabeo
+            </li>,
+            <li
+              className="products__product"
+            >
+              Love Shortie All Butter Shortbread
+            </li>,
+          ],
+          "className": "products__list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Borsao Macabeo",
+              "className": "products__product",
+            },
+            "ref": null,
+            "rendered": "Borsao Macabeo",
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Love Shortie All Butter Shortbread",
+              "className": "products__product",
+            },
+            "ref": null,
+            "rendered": "Love Shortie All Butter Shortbread",
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="products__heading"
+          >
+            Products:
+          </h2>,
+          <ul
+            className="products__list"
+          >
+            <li
+              className="products__product"
+            >
+              Borsao Macabeo
+            </li>
+            <li
+              className="products__product"
+            >
+              Love Shortie All Butter Shortbread
+            </li>
+          </ul>,
+        ],
+        "className": "products",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Products:",
+            "className": "products__heading",
+          },
+          "ref": null,
+          "rendered": "Products:",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="products__product"
+              >
+                Borsao Macabeo
+              </li>,
+              <li
+                className="products__product"
+              >
+                Love Shortie All Butter Shortbread
+              </li>,
+            ],
+            "className": "products__list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Borsao Macabeo",
+                "className": "products__product",
+              },
+              "ref": null,
+              "rendered": "Borsao Macabeo",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Love Shortie All Butter Shortbread",
+                "className": "products__product",
+              },
+              "ref": null,
+              "rendered": "Love Shortie All Butter Shortbread",
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
+}
+`;
