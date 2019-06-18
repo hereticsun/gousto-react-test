@@ -59,16 +59,28 @@ ShallowWrapper {
         <ul
           className="products__list"
         >
-          <li
-            className="products__product"
-          >
-            Borsao Macabeo
-          </li>
-          <li
-            className="products__product"
-          >
-            Love Shortie All Butter Shortbread
-          </li>
+          <Product
+            product={
+              Object {
+                "categories": Array [
+                  Object {
+                    "id": 1,
+                  },
+                ],
+                "id": "1",
+                "title": "Borsao Macabeo",
+              }
+            }
+          />
+          <Product
+            product={
+              Object {
+                "categories": Array [],
+                "id": "2",
+                "title": "Love Shortie All Butter Shortbread",
+              }
+            }
+          />
         </ul>,
       ],
       "className": "products",
@@ -93,16 +105,28 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <li
-              className="products__product"
-            >
-              Borsao Macabeo
-            </li>,
-            <li
-              className="products__product"
-            >
-              Love Shortie All Butter Shortbread
-            </li>,
+            <Product
+              product={
+                Object {
+                  "categories": Array [
+                    Object {
+                      "id": 1,
+                    },
+                  ],
+                  "id": "1",
+                  "title": "Borsao Macabeo",
+                }
+              }
+            />,
+            <Product
+              product={
+                Object {
+                  "categories": Array [],
+                  "id": "2",
+                  "title": "Love Shortie All Butter Shortbread",
+                }
+              }
+            />,
           ],
           "className": "products__list",
         },
@@ -111,26 +135,36 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "1",
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": "Borsao Macabeo",
-              "className": "products__product",
+              "product": Object {
+                "categories": Array [
+                  Object {
+                    "id": 1,
+                  },
+                ],
+                "id": "1",
+                "title": "Borsao Macabeo",
+              },
             },
             "ref": null,
-            "rendered": "Borsao Macabeo",
-            "type": "li",
+            "rendered": null,
+            "type": [Function],
           },
           Object {
             "instance": null,
             "key": "2",
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": "Love Shortie All Butter Shortbread",
-              "className": "products__product",
+              "product": Object {
+                "categories": Array [],
+                "id": "2",
+                "title": "Love Shortie All Butter Shortbread",
+              },
             },
             "ref": null,
-            "rendered": "Love Shortie All Butter Shortbread",
-            "type": "li",
+            "rendered": null,
+            "type": [Function],
           },
         ],
         "type": "ul",
@@ -153,16 +187,28 @@ ShallowWrapper {
           <ul
             className="products__list"
           >
-            <li
-              className="products__product"
-            >
-              Borsao Macabeo
-            </li>
-            <li
-              className="products__product"
-            >
-              Love Shortie All Butter Shortbread
-            </li>
+            <Product
+              product={
+                Object {
+                  "categories": Array [
+                    Object {
+                      "id": 1,
+                    },
+                  ],
+                  "id": "1",
+                  "title": "Borsao Macabeo",
+                }
+              }
+            />
+            <Product
+              product={
+                Object {
+                  "categories": Array [],
+                  "id": "2",
+                  "title": "Love Shortie All Butter Shortbread",
+                }
+              }
+            />
           </ul>,
         ],
         "className": "products",
@@ -187,16 +233,28 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <li
-                className="products__product"
-              >
-                Borsao Macabeo
-              </li>,
-              <li
-                className="products__product"
-              >
-                Love Shortie All Butter Shortbread
-              </li>,
+              <Product
+                product={
+                  Object {
+                    "categories": Array [
+                      Object {
+                        "id": 1,
+                      },
+                    ],
+                    "id": "1",
+                    "title": "Borsao Macabeo",
+                  }
+                }
+              />,
+              <Product
+                product={
+                  Object {
+                    "categories": Array [],
+                    "id": "2",
+                    "title": "Love Shortie All Butter Shortbread",
+                  }
+                }
+              />,
             ],
             "className": "products__list",
           },
@@ -205,26 +263,36 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": "1",
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
-                "children": "Borsao Macabeo",
-                "className": "products__product",
+                "product": Object {
+                  "categories": Array [
+                    Object {
+                      "id": 1,
+                    },
+                  ],
+                  "id": "1",
+                  "title": "Borsao Macabeo",
+                },
               },
               "ref": null,
-              "rendered": "Borsao Macabeo",
-              "type": "li",
+              "rendered": null,
+              "type": [Function],
             },
             Object {
               "instance": null,
               "key": "2",
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
-                "children": "Love Shortie All Butter Shortbread",
-                "className": "products__product",
+                "product": Object {
+                  "categories": Array [],
+                  "id": "2",
+                  "title": "Love Shortie All Butter Shortbread",
+                },
               },
               "ref": null,
-              "rendered": "Love Shortie All Butter Shortbread",
-              "type": "li",
+              "rendered": null,
+              "type": [Function],
             },
           ],
           "type": "ul",

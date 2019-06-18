@@ -1,0 +1,16 @@
+.product__title {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.product__description {
+  overflow: hidden;
+  height: 0;
+}
+
+.product__description--expanded {
+  height: auto;
+}

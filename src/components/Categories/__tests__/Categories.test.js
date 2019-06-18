@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, hasClass } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Link } from 'react-router-dom'
 
 import {Categories} from '../Categories';

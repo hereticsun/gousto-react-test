@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Product from '../Product';
 import { fetchProducts } from '../../actions/products';
 
 export class Products extends Component {
@@ -18,26 +19,15 @@ export class Products extends Component {
     return this.props.products;
   }
 
-  renderList() {
-    return this.productList().map((product) => {
-      return (
-        <li
-          key={product.id}
-          className="products__product"
-        >
-          {product.title}
-        </li>
-      );
-    });
-  }
-
   render() {
     return (
       <section className="products">
         <h2 className="products__heading">Products:</h2>
         {this.props.products.length > 0 && (
           <ul className="products__list">
-            {this.renderList()}
+            {this.productList().map(product => (
+              <Product key={product.id} product={product} />
+            ))}
           </ul>
         )}
       </section>
@@ -53,32 +43,7 @@ function mapStateToProps(state) {
 
 Products.propTypes = {
   categoryId: PropTypes.string,
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      sku: PropTypes.string,
-      title: PropTypes.string,
-      description: PropTypes.string,
-      list_price: PropTypes.string,
-      is_vatable: PropTypes.bool,
-      is_for_sale: PropTypes.bool,
-      age_restricted: PropTypes.bool,
-      box_limit: PropTypes.number,
-      always_on_menu: PropTypes.bool,
-      volume: PropTypes.number,
-      zone: PropTypes.string,
-      created_at: PropTypes.string,
-      categories: PropTypes.arrayOf(PropTypes.object),
-      tags: PropTypes.array,
-      images: PropTypes.shape({
-        365: PropTypes.shape({
-          src: PropTypes.string,
-          url: PropTypes.string,
-          width: PropTypes.number,
-        }),
-      }),
-    })
-  )
+  products: PropTypes.array,
 };
 
 export default connect(mapStateToProps, { fetchProducts })(Products);

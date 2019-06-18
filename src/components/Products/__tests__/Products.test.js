@@ -25,7 +25,7 @@ describe(`<Products />`, () => {
 
       it('displays the list of product titles', () => {
         expect(element).toMatchSnapshot();
-        expect(element.find('li')).toHaveLength(props.products.length);
+        expect(element.find('Product')).toHaveLength(props.products.length);
       });
     });
   });

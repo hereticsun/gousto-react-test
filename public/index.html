@@ -38,6 +38,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+    function handleFirstTab(e) {
+        if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+            window.removeEventListener('keydown', handleFirstTab);
+        }
+    }
+
+    window.addEventListener('keydown', handleFirstTab);
+  </script>
 </body>
 
 </html>
