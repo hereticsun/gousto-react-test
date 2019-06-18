@@ -20,10 +20,16 @@ ShallowWrapper {
     products={
       Array [
         Object {
+          "categories": Array [
+            Object {
+              "id": 1,
+            },
+          ],
           "id": "1",
           "title": "Borsao Macabeo",
         },
         Object {
+          "categories": Array [],
           "id": "2",
           "title": "Love Shortie All Butter Shortbread",
         },

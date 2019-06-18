@@ -8,8 +8,18 @@ export class Products extends Component {
     this.props.fetchProducts();
   }
 
+  productList(){
+    if(Boolean(this.props.categoryId)) {
+      const filteredProducts = this.props.products.filter(
+        product => product.categories.some(category => category.id === this.props.categoryId)
+      );
+      return filteredProducts;
+    }
+    return this.props.products;
+  }
+
   renderList() {
-    return this.props.products.map((product) => {
+    return this.productList().map((product) => {
       return (
         <li
           key={product.id}
@@ -42,6 +52,7 @@ function mapStateToProps(state) {
 }
 
 Products.propTypes = {
+  categoryId: PropTypes.string,
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

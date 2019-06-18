@@ -6,13 +6,13 @@ import './App.css'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app">
         <header className="app--header">
-          <h1 className="logo">Gousto</h1>
+          <h1 className="logo"><Link to="/" className="title">Gousto</Link></h1>
         </header>
 
         <main>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/:categoryId?" component={Home} />
         </main>
       </div>
     )

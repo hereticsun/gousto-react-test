@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { fetchCategories } from '../../actions/categories';
 import './Categories.css';
@@ -11,15 +12,21 @@ export class Categories extends Component {
 
   renderList() {
     return this.props.categories.map((category) => {
+      const activeCategory = this.props.categoryId;
+      const isActive = category.id === activeCategory;
       return (
-            <li
-                key={category.id}
-                className="categories__category"
-            >
-                {category.title}
-            </li>
-        )
-    })
+        <li
+            key={category.id}
+            className={
+              `categories__category ${isActive ? 'categories__category--active' : ''}`
+            }
+        >
+            <Link to={`/${category.id}`} className="categories__category-link" style={{fontWeight: isActive ? 'bold' : null}}>
+              {category.title}
+            </Link>
+        </li>
+      );
+    });
   }
 
   render() {
@@ -32,7 +39,7 @@ export class Categories extends Component {
           </ul>
         ) : null}
       </section>  
-      )
+      );
   }
 }
 
@@ -43,6 +50,7 @@ function mapStateToProps(state) {
 }
 
 Categories.propTypes = {
+  categoryId: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

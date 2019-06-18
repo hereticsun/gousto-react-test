@@ -25,17 +25,24 @@ ShallowWrapper {
           <h1
             className="logo"
           >
-            Gousto
+            <Link
+              className="title"
+              replace={false}
+              to="/"
+            >
+              Gousto
+            </Link>
           </h1>
         </header>,
         <main>
           <Route
             component={[Function]}
             exact={true}
-            path="/"
+            path="/:categoryId?"
           />
         </main>,
       ],
+      "className": "app",
     },
     "ref": null,
     "rendered": Array [
@@ -47,7 +54,13 @@ ShallowWrapper {
           "children": <h1
             className="logo"
           >
-            Gousto
+            <Link
+              className="title"
+              replace={false}
+              to="/"
+            >
+              Gousto
+            </Link>
           </h1>,
           "className": "app--header",
         },
@@ -57,11 +70,30 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Gousto",
+            "children": <Link
+              className="title"
+              replace={false}
+              to="/"
+            >
+              Gousto
+            </Link>,
             "className": "logo",
           },
           "ref": null,
-          "rendered": "Gousto",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Gousto",
+              "className": "title",
+              "replace": false,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "Gousto",
+            "type": [Function],
+          },
           "type": "h1",
         },
         "type": "header",
@@ -74,7 +106,7 @@ ShallowWrapper {
           "children": <Route
             component={[Function]}
             exact={true}
-            path="/"
+            path="/:categoryId?"
           />,
         },
         "ref": null,
@@ -85,7 +117,7 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "exact": true,
-            "path": "/",
+            "path": "/:categoryId?",
           },
           "ref": null,
           "rendered": null,
@@ -109,17 +141,24 @@ ShallowWrapper {
             <h1
               className="logo"
             >
-              Gousto
+              <Link
+                className="title"
+                replace={false}
+                to="/"
+              >
+                Gousto
+              </Link>
             </h1>
           </header>,
           <main>
             <Route
               component={[Function]}
               exact={true}
-              path="/"
+              path="/:categoryId?"
             />
           </main>,
         ],
+        "className": "app",
       },
       "ref": null,
       "rendered": Array [
@@ -131,7 +170,13 @@ ShallowWrapper {
             "children": <h1
               className="logo"
             >
-              Gousto
+              <Link
+                className="title"
+                replace={false}
+                to="/"
+              >
+                Gousto
+              </Link>
             </h1>,
             "className": "app--header",
           },
@@ -141,11 +186,30 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Gousto",
+              "children": <Link
+                className="title"
+                replace={false}
+                to="/"
+              >
+                Gousto
+              </Link>,
               "className": "logo",
             },
             "ref": null,
-            "rendered": "Gousto",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Gousto",
+                "className": "title",
+                "replace": false,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": "Gousto",
+              "type": [Function],
+            },
             "type": "h1",
           },
           "type": "header",
@@ -158,7 +222,7 @@ ShallowWrapper {
             "children": <Route
               component={[Function]}
               exact={true}
-              path="/"
+              path="/:categoryId?"
             />,
           },
           "ref": null,
@@ -169,7 +233,7 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "exact": true,
-              "path": "/",
+              "path": "/:categoryId?",
             },
             "ref": null,
             "rendered": null,

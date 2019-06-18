@@ -20,8 +20,18 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
           Object {
             "isThrow": false,
             "value": undefined,
@@ -54,14 +64,36 @@ ShallowWrapper {
           className="categories__list"
         >
           <li
-            className="categories__category"
+            className="categories__category "
           >
-            Drinks Cabinet
+            <Link
+              className="categories__category-link"
+              replace={false}
+              style={
+                Object {
+                  "fontWeight": null,
+                }
+              }
+              to="/1"
+            >
+              Drinks Cabinet
+            </Link>
           </li>
           <li
-            className="categories__category"
+            className="categories__category "
           >
-            Kitchenware
+            <Link
+              className="categories__category-link"
+              replace={false}
+              style={
+                Object {
+                  "fontWeight": null,
+                }
+              }
+              to="/2"
+            >
+              Kitchenware
+            </Link>
           </li>
         </ul>,
       ],
@@ -88,14 +120,36 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <li
-              className="categories__category"
+              className="categories__category "
             >
-              Drinks Cabinet
+              <Link
+                className="categories__category-link"
+                replace={false}
+                style={
+                  Object {
+                    "fontWeight": null,
+                  }
+                }
+                to="/1"
+              >
+                Drinks Cabinet
+              </Link>
             </li>,
             <li
-              className="categories__category"
+              className="categories__category "
             >
-              Kitchenware
+              <Link
+                className="categories__category-link"
+                replace={false}
+                style={
+                  Object {
+                    "fontWeight": null,
+                  }
+                }
+                to="/2"
+              >
+                Kitchenware
+              </Link>
             </li>,
           ],
           "className": "categories__list",
@@ -107,11 +161,38 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "host",
             "props": Object {
-              "children": "Drinks Cabinet",
-              "className": "categories__category",
+              "children": <Link
+                className="categories__category-link"
+                replace={false}
+                style={
+                  Object {
+                    "fontWeight": null,
+                  }
+                }
+                to="/1"
+              >
+                Drinks Cabinet
+              </Link>,
+              "className": "categories__category ",
             },
             "ref": null,
-            "rendered": "Drinks Cabinet",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Drinks Cabinet",
+                "className": "categories__category-link",
+                "replace": false,
+                "style": Object {
+                  "fontWeight": null,
+                },
+                "to": "/1",
+              },
+              "ref": null,
+              "rendered": "Drinks Cabinet",
+              "type": [Function],
+            },
             "type": "li",
           },
           Object {
@@ -119,11 +200,38 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "host",
             "props": Object {
-              "children": "Kitchenware",
-              "className": "categories__category",
+              "children": <Link
+                className="categories__category-link"
+                replace={false}
+                style={
+                  Object {
+                    "fontWeight": null,
+                  }
+                }
+                to="/2"
+              >
+                Kitchenware
+              </Link>,
+              "className": "categories__category ",
             },
             "ref": null,
-            "rendered": "Kitchenware",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Kitchenware",
+                "className": "categories__category-link",
+                "replace": false,
+                "style": Object {
+                  "fontWeight": null,
+                },
+                "to": "/2",
+              },
+              "ref": null,
+              "rendered": "Kitchenware",
+              "type": [Function],
+            },
             "type": "li",
           },
         ],
@@ -148,14 +256,36 @@ ShallowWrapper {
             className="categories__list"
           >
             <li
-              className="categories__category"
+              className="categories__category "
             >
-              Drinks Cabinet
+              <Link
+                className="categories__category-link"
+                replace={false}
+                style={
+                  Object {
+                    "fontWeight": null,
+                  }
+                }
+                to="/1"
+              >
+                Drinks Cabinet
+              </Link>
             </li>
             <li
-              className="categories__category"
+              className="categories__category "
             >
-              Kitchenware
+              <Link
+                className="categories__category-link"
+                replace={false}
+                style={
+                  Object {
+                    "fontWeight": null,
+                  }
+                }
+                to="/2"
+              >
+                Kitchenware
+              </Link>
             </li>
           </ul>,
         ],
@@ -182,14 +312,36 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <li
-                className="categories__category"
+                className="categories__category "
               >
-                Drinks Cabinet
+                <Link
+                  className="categories__category-link"
+                  replace={false}
+                  style={
+                    Object {
+                      "fontWeight": null,
+                    }
+                  }
+                  to="/1"
+                >
+                  Drinks Cabinet
+                </Link>
               </li>,
               <li
-                className="categories__category"
+                className="categories__category "
               >
-                Kitchenware
+                <Link
+                  className="categories__category-link"
+                  replace={false}
+                  style={
+                    Object {
+                      "fontWeight": null,
+                    }
+                  }
+                  to="/2"
+                >
+                  Kitchenware
+                </Link>
               </li>,
             ],
             "className": "categories__list",
@@ -201,11 +353,38 @@ ShallowWrapper {
               "key": "1",
               "nodeType": "host",
               "props": Object {
-                "children": "Drinks Cabinet",
-                "className": "categories__category",
+                "children": <Link
+                  className="categories__category-link"
+                  replace={false}
+                  style={
+                    Object {
+                      "fontWeight": null,
+                    }
+                  }
+                  to="/1"
+                >
+                  Drinks Cabinet
+                </Link>,
+                "className": "categories__category ",
               },
               "ref": null,
-              "rendered": "Drinks Cabinet",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Drinks Cabinet",
+                  "className": "categories__category-link",
+                  "replace": false,
+                  "style": Object {
+                    "fontWeight": null,
+                  },
+                  "to": "/1",
+                },
+                "ref": null,
+                "rendered": "Drinks Cabinet",
+                "type": [Function],
+              },
               "type": "li",
             },
             Object {
@@ -213,11 +392,38 @@ ShallowWrapper {
               "key": "2",
               "nodeType": "host",
               "props": Object {
-                "children": "Kitchenware",
-                "className": "categories__category",
+                "children": <Link
+                  className="categories__category-link"
+                  replace={false}
+                  style={
+                    Object {
+                      "fontWeight": null,
+                    }
+                  }
+                  to="/2"
+                >
+                  Kitchenware
+                </Link>,
+                "className": "categories__category ",
               },
               "ref": null,
-              "rendered": "Kitchenware",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Kitchenware",
+                  "className": "categories__category-link",
+                  "replace": false,
+                  "style": Object {
+                    "fontWeight": null,
+                  },
+                  "to": "/2",
+                },
+                "ref": null,
+                "rendered": "Kitchenware",
+                "type": [Function],
+              },
               "type": "li",
             },
           ],

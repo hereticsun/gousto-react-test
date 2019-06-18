@@ -15,13 +15,23 @@
 }
 
 .categories__category {
-  display: flex;
+  display: block;
   flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
   margin: 8px;
-  padding: 8px 16px;
   border-radius: 3px;
   color: #fff;
   background-color: #7290ff;
+}
+
+.categories__category-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.categories__category-link:hover {
+  background-color: #4968d8;
 }

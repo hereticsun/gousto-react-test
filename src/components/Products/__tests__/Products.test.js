@@ -11,10 +11,12 @@ describe(`<Products />`, () => {
           {
             id: '1',
             title: 'Borsao Macabeo',
+            categories: [{id: 1}],
           },
           {
             id: '2',
             title: 'Love Shortie All Butter Shortbread',
+            categories: [],
           },
         ],
         fetchProducts: jest.fn()
