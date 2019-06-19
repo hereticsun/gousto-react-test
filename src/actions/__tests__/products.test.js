@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { fetchProducts } from '../products';
-import { FETCH_PRODUCTS } from '../constants';
+import { fetchProducts, searchProducts } from '../products';
+import { FETCH_PRODUCTS, SEARCH_PRODUCTS } from '../constants';
 import fetchMock from 'fetch-mock'
 
 const middlewares = [thunk]
@@ -62,7 +62,7 @@ describe('fetchProducts', () => {
   }
 
 
-  it.only('creates an async action to fetch the products', () => {
+  it('creates an async action to fetch the products', () => {
     fetchMock.getOnce(productsApi, {
       body: {
         data: [ productData ]
@@ -86,3 +86,15 @@ describe('fetchProducts', () => {
     })
   })
 })
+
+describe('searchProducts', () => {
+  it('should create an action to search products', () => {
+    const searchTerm = 'serv';
+    const expectedAction = {
+      type: SEARCH_PRODUCTS,
+      payload: {searchTerm}
+    };
+
+    expect(searchProducts(searchTerm)).toEqual(expectedAction);
+  });
+});

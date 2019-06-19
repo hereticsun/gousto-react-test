@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Product from '../Product';
+import SearchBar from '../SearchBar';
 import { fetchProducts } from '../../actions/products';
 
 export class Products extends Component {
@@ -14,7 +15,32 @@ export class Products extends Component {
       const filteredProducts = this.props.products.filter(
         product => product.categories.some(category => category.id === this.props.selectedCategory.id)
       );
+
+      if(Boolean(this.props.searchTerm)) {
+        const searchedProducts = filteredProducts.filter(
+          product => {
+            const lowerTitle = product.title.toLowerCase();
+            const lowerDesc = product.description.toLowerCase();
+            const q = this.props.searchTerm.toLowerCase();
+            const test = lowerTitle.includes(q) || lowerDesc.includes(q);
+            return test;
+          }
+        );
+        return searchedProducts;
+      }
       return filteredProducts;
+    }
+    if(Boolean(this.props.searchTerm)) {
+      const searchedProducts = this.props.products.filter(
+        product => {
+          const lowerTitle = product.title.toLowerCase();
+          const lowerDesc = product.description.toLowerCase();
+          const q = this.props.searchTerm.toLowerCase();
+          const test = lowerTitle.includes(q) || lowerDesc.includes(q);
+          return test;
+        }
+      );
+      return searchedProducts;
     }
     return this.props.products;
   }
@@ -26,6 +52,7 @@ export class Products extends Component {
     return (
       <section className="products">
         <h2 className="products__heading">{productHeading}</h2>
+        <SearchBar />
         {this.props.products.length > 0 && (
           <ul className="products__list">
             {this.productList().map(product => (
@@ -41,13 +68,15 @@ export class Products extends Component {
 function mapStateToProps(state) {
   return {
       products: state.products,
-      selectedCategory: state.selectedCategory
+      selectedCategory: state.selectedCategory,
+      searchTerm: state.searchTerm,
   };
 }
 
 Products.propTypes = {
   selectedCategory: PropTypes.object,
   products: PropTypes.array,
+  searchTerm: PropTypes.string,
 };
 
 export default connect(mapStateToProps, { fetchProducts })(Products);

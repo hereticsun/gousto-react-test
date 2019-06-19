@@ -1,5 +1,5 @@
 import 'cross-fetch/polyfill';
-import { FETCH_PRODUCTS } from './constants';
+import { FETCH_PRODUCTS, SEARCH_PRODUCTS } from './constants';
 
 const productsApi = 'https://api.gousto.co.uk/products/v2.0/products?includes[]=categories&image_sizes[]=365';
 
@@ -21,3 +21,12 @@ export const fetchProducts = () => {
       });
   };
 };
+
+export const searchProducts = (searchTerm) => {
+  return {
+    type: SEARCH_PRODUCTS,
+    payload: {
+      searchTerm
+    }
+  };
+}

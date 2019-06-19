@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { fetchCategories } from '../categories';
-import { FETCH_CATEGORIES } from '../constants';
+import { fetchCategories, selectCategory } from '../categories';
+import { FETCH_CATEGORIES, SELECT_CATEGORY } from '../constants';
 import fetchMock from 'fetch-mock'
 
 const middlewares = [thunk]
@@ -14,7 +14,7 @@ describe('fetchCategories', () => {
     fetchMock.restore()
   })
 
-  it.only('creates an async action to fetch the categories', () => {
+  it('creates an async action to fetch the categories', () => {
     fetchMock.getOnce(categoriesApi, {
       body: {
         data: [
@@ -56,3 +56,18 @@ describe('fetchCategories', () => {
     })
   })
 })
+
+describe('selectCategory', () => {
+  it('should create an action to select a category', () => {
+    const selectedCategory = {
+      id: '1',
+      title: 'My category'
+    };
+    const expectedAction = {
+      type: SELECT_CATEGORY,
+      payload: {selectedCategory}
+    };
+
+    expect(selectCategory(selectedCategory)).toEqual(expectedAction);
+  });
+});

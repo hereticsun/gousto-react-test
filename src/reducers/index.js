@@ -1,13 +1,12 @@
 import { combineReducers } from 'redux';
-import home from './home';
-import { CategoriesReducer, SelectedCategoryReducer } from './reducer_categories';
-import ProductsReducer from './reducer_products';
+import { CategoriesReducer, SelectedCategoryReducer } from './categories';
+import { ProductsReducer, SearchProductsReducer } from './products';
 
 const rootReducer = combineReducers({
-  home,
   categories: CategoriesReducer,
   selectedCategory: SelectedCategoryReducer,
   products: ProductsReducer,
+  searchTerm: SearchProductsReducer,
 });
 
 export default rootReducer;

@@ -57,6 +57,7 @@ ShallowWrapper {
         >
           Products
         </h2>,
+        <Connect(SearchBar) />,
         <ul
           className="products__list"
         >
@@ -99,6 +100,15 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Products",
         "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -185,6 +195,7 @@ ShallowWrapper {
           >
             Products
           </h2>,
+          <Connect(SearchBar) />,
           <ul
             className="products__list"
           >
@@ -227,6 +238,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Products",
           "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
