@@ -1,8 +1,5 @@
 # Gousto coding test
-
-Hi there! We prepared a technical task so we can get to know you better. Below you will find scenarios and further details on what this task is about.
-
-If anything is unclear or you have any questions, feel free to get back to us. We want to make our technical task a pleasant experience so feel free to give us any feedback on this exercise.
+Submitted by Azlan Cuttilan
 
 ## How to use:
 
@@ -19,86 +16,44 @@ If anything is unclear or you have any questions, feel free to get back to us. W
 * `yarn build` - build the production artifacts
 * `yarn test` - running the tests
 
-## How to deliver your assessment
+## Application structure:
 
-* Please fork/clone this repository to your own version control platform (GitHub, GitLab, BitBucket, etc.)(public repo) and send us the link to it
-* We will pay attention to the commits to see how the work was structured
+Within the `src` folder, `actions`, `components` and `reducers` are grouped within their respective folders. Each component is within it's own folder that groups the tests, JS and CSS for the respective component.
 
-## Functional requirements
+```
+.
++-- public
++-- src
+    +-- actions
+    |   +-- __tests__
+    +-- components
+    |   +-- App
+    |   |   + -- __tests__
+    |   +-- Categories
+    |   |   +-- __tests__
+    |   +-- Home
+    |   |   +-- __tests__
+    |   +-- Product
+    |   |   +-- __tests__
+    |   +-- Products
+    |   |   +-- __tests__
+    |   +-- SearchBar
+    |       +-- __tests__
+    +-- reducers
+        +-- __tests__
 
-### Task 1: As a user I want to see all available product categories
-  
-  * Given that I am a user
-  * When I land on the main page
-  * Then I can see the categories of products
+```
 
-### Task 2: As a user I want to see a list of products titles
- 
-  * Given that I am a user
-  * When I land on the main page
-  * Then I can see a list of products titles
+## Missing functional requirements:
+All functional requirements were completed
 
-### Task 3: As a user I want to see the products for the selected category
- 
-  * Given that I am a user
-  * When I land on the main page view
-  * And I click on 'Drinks Cabinet' category
-  * Then I can see a list of products belonging to that category
-  * And the selected category is bold
+## Possile improvements / functionality:
 
-### Task 4: As a user I want to be able to search in the product title and description
-  
-  * Given that I am a user and I land on the 'Drinks Cabinet'
-  * When I type ' serv' in the input search
-  * Then the products matching the search input in title and/or description are shown below
+* The submission could have improved testing by implementing end to end tests using a framework such as [Cypress](https://cypress.io)
+* There is room to improve test coverage
+* Inclusion of linting and performing this in a git pre-commit hook would be helpful to ensure consistency of code quality
+* Use of the browser history enables the functionnal requirement for use of the browser's native back and forward buttons but does not allow for direct access to that view if the link is bookmarked or shared. This could be achieved by updating the store for a selected category if a url param has been provided
+* Styling has lots of room for improvements. Basic styling was applied ensuring the app could be navaigated using keyboard only. CSS modules would be a good improvement.
 
-### Task 5: As a user I want to be able to see the product description when I click on the product name
-  
-  * Given that I am a user and I land on main page
-  * When I click on 'Borsao Macabeo'
-  * Then I can see the description appearing below and the title is bold
-  * When I click again on the 'Borsao Macabeo'
-  * Then I can see that the description is hidden
-  * When I click on multiple products
-  * Then all the clicked products descriptions are visible
-
-### Task 6: As a user I want to be able to navigate with the browser's native back and forward buttons
-  
-  * Given that I am a user
-  * When I am on the 'Drinks Cabinet' category
-  * And I click on 'Large Alcohol' category
-  * Then I can click on the back button from the browser
-  * And I can see the 'Drinks Cabinet' category selected
-  * Then I click forward button
-  * And I can see the 'Large Alcohol' category selected
-
-#### API endpoints:
-
-* To get the categories: https://api.gousto.co.uk/products/v2.0/categories
-* To get the products: https://api.gousto.co.uk/products/v2.0/products?includes[]=categories&image_sizes[]=365
-* For cross origin accessibility you can use [cross-fetch](https://www.npmjs.com/package/cross-fetch) that is already installed in package.json.
-* If one of the first points are not working then use steps from this link : 
-`https://alfilatov.com/posts/run-chrome-without-cors/`
-
-## Non-Functional Requirements 
-
-* UI should be built with React, but you are allowed to use additional other libraries if needed
-* Use your preferred library for state management (Redux dependencies are already set up, but you can use what you want)
-* Use your preferred CSS solution/library. Use your imagination, but do not spend to much time for css
-* The application should be responsive (the application can be used on mobile)
-* The code should include `test`
-* The code should be production ready (no refactoring need)
-
-## Help us to understand your solution
-
-* In order to understand better you solution we would like to see the following sections in a Readme:
-    * `How to use`: details about how to use your solution(if anything different from what we added)
-    * `Application structure`: explain the architecture - feel free to change the base structure from this test
-    * `A list of missing functional requirements`: if any, and explain why you didn't complete them
-    * `Possible improvements/ functionality`: anything that you wished you could've added if you had more time
-
-## Visuals
-
-![Image1](./public/first.png)
-![Image2](./public/second.png)
-![Image3](./public/third.png)
+## Notes:
+I experienced CORS issues when making requests to the API endpoints provided and had to follow the recommendation to follow the steps in `https://alfilatov.com/posts/run-chrome-without-cors/`
