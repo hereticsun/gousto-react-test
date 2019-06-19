@@ -8,15 +8,11 @@ import Products from '../Products';
 
 
 export const Home = (props) => {
-  let selectedCategory;
-  if(props.match && props.match.params && props.match.params.categoryId) {
-    selectedCategory = props.match.params.categoryId;
-  }
 
   return (
     <div>
-      <Categories categoryId={selectedCategory} />
-      <Products categoryId={selectedCategory} />
+      <Categories />
+      <Products />
     </div>
   );
 };
@@ -30,14 +26,6 @@ const mapDispatchToProps = dispatch =>
     },
     dispatch
   )
-
-Home.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      categoryId: PropTypes.string
-    })
-  })
-}
 
 export default connect(
   mapStateToProps,

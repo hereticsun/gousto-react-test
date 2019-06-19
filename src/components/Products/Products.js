@@ -10,9 +10,9 @@ export class Products extends Component {
   }
 
   productList(){
-    if(Boolean(this.props.categoryId)) {
+    if(Boolean(this.props.selectedCategory.id)) {
       const filteredProducts = this.props.products.filter(
-        product => product.categories.some(category => category.id === this.props.categoryId)
+        product => product.categories.some(category => category.id === this.props.selectedCategory.id)
       );
       return filteredProducts;
     }
@@ -20,9 +20,12 @@ export class Products extends Component {
   }
 
   render() {
+    const productHeading = Boolean(this.props.selectedCategory.title) ?
+      `Products in ${this.props.selectedCategory.title}` :
+      'Products';
     return (
       <section className="products">
-        <h2 className="products__heading">Products:</h2>
+        <h2 className="products__heading">{productHeading}</h2>
         {this.props.products.length > 0 && (
           <ul className="products__list">
             {this.productList().map(product => (
@@ -37,12 +40,13 @@ export class Products extends Component {
 
 function mapStateToProps(state) {
   return {
-      products: state.products
+      products: state.products,
+      selectedCategory: state.selectedCategory
   };
 }
 
 Products.propTypes = {
-  categoryId: PropTypes.string,
+  selectedCategory: PropTypes.object,
   products: PropTypes.array,
 };
 

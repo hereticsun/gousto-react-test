@@ -19,6 +19,7 @@ describe(`<Products />`, () => {
             categories: [],
           },
         ],
+        selectedCategory: {},
         fetchProducts: jest.fn()
       };
       const element = shallow(<Products {...props} />);

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
-import { fetchCategories } from '../../actions/categories';
+import { fetchCategories, selectCategory } from '../../actions/categories';
 import './Categories.css';
 
 export class Categories extends Component {
@@ -12,8 +12,13 @@ export class Categories extends Component {
 
   renderList() {
     return this.props.categories.map((category) => {
-      const activeCategory = this.props.categoryId;
+      const activeCategory = this.props.selectedCategory.id;
       const isActive = category.id === activeCategory;
+      const handleClick = () => {
+        this.props.selectCategory(category);
+        this.props.history.push(`/${category.id}`);
+      };
+    
       return (
         <li
             key={category.id}
@@ -21,9 +26,9 @@ export class Categories extends Component {
               `categories__category ${isActive ? 'categories__category--active' : ''}`
             }
         >
-            <Link to={`/${category.id}`} className="categories__category-link" style={{fontWeight: isActive ? 'bold' : null}}>
+            <button onClick={handleClick.bind(this)} className="categories__category-link" style={{fontWeight: isActive ? 'bold' : null}}>
               {category.title}
-            </Link>
+            </button>
         </li>
       );
     });
@@ -45,12 +50,13 @@ export class Categories extends Component {
 
 function mapStateToProps(state) {
   return {
-      categories: state.categories
+      categories: state.categories,
+      selectedCategory: state.selectedCategory
   };
 }
 
 Categories.propTypes = {
-  categoryId: PropTypes.string,
+  selectedCategory: PropTypes.object,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -65,4 +71,4 @@ Categories.propTypes = {
     })),
 };
 
-export default connect(mapStateToProps, { fetchCategories })(Categories);
+export default withRouter(connect(mapStateToProps, { fetchCategories, selectCategory })(Categories));

@@ -1,5 +1,5 @@
 import 'cross-fetch/polyfill';
-import { FETCH_CATEGORIES } from './constants';
+import { FETCH_CATEGORIES, SELECT_CATEGORY } from './constants';
 
 const categoriesApi = 'https://api.gousto.co.uk/products/v2.0/categories';
 
@@ -21,3 +21,12 @@ export const fetchCategories = () => {
       });
   };
 };
+
+export const selectCategory = (selectedCategory) => {
+  return {
+    type: SELECT_CATEGORY,
+    payload: {
+      selectedCategory
+    }
+  };
+}

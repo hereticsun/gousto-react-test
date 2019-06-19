@@ -1,13 +1,20 @@
-import { FETCH_CATEGORIES } from '../actions/constants';
+import { FETCH_CATEGORIES, SELECT_CATEGORY } from '../actions/constants';
 
-const categories = (state = [], action) => {
+export const CategoriesReducer = (state = [], action) => {
   switch (action.type) {
-      case FETCH_CATEGORIES:
-        const categories = action.categories.data;
-        return categories;
+    case FETCH_CATEGORIES:
+      const categories = action.categories.data;
+      return categories;
     default:
       return state;
   }
 };
 
-export default categories;
+export const SelectedCategoryReducer = (state = {}, action) => {
+  switch (action.type) {
+    case SELECT_CATEGORY:
+      return action.payload.selectedCategory;
+  default:
+    return state;
+  }
+};

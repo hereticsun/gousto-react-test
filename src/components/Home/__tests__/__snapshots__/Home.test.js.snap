@@ -19,7 +19,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Categories) />,
+        <withRouter(Connect(Categories)) />,
         <Connect(Products) />,
       ],
     },
@@ -28,10 +28,8 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "categoryId": undefined,
-        },
+        "nodeType": "function",
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -40,9 +38,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {
-          "categoryId": undefined,
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -57,7 +53,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Categories) />,
+          <withRouter(Connect(Categories)) />,
           <Connect(Products) />,
         ],
       },
@@ -66,10 +62,8 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "categoryId": undefined,
-          },
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -78,9 +72,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {
-            "categoryId": undefined,
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
