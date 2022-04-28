@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "connected-react-router": "^4.5.0",
-    "cross-fetch": "^3.0.1",
+    "cross-fetch": "^3.1.5",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-redux": "5.1.1",
